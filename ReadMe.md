@@ -65,7 +65,8 @@ Users can **create, read, update, and delete (CRUD)** smoothies with title, meth
 ---
 
 ## 📷 Screenshots  
-_(Add some screenshots of your app UI here)_  
+![Supabase Logo](public/asset/supabase.png)
+
 
 ---
 

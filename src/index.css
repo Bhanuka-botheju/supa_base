@@ -141,3 +141,68 @@ nav h1 {
   color: #388e3c;
   font-weight: 500;
 }
+.update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.update-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #333;
+}
+
+.update-form input,
+.update-form textarea {
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.update-form textarea {
+  min-height: 100px;
+}
+
+.update-form button {
+  background: #2196f3;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.update-form button:hover {
+  background: #1976d2;
+}
+
+.error {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.success {
+  color: #388e3c;
+  font-weight: 500;
+}
+.edit-btn {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.delete-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}

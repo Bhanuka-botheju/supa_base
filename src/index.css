@@ -89,3 +89,55 @@ nav h1 {
   font-style: italic;
   color: #555;
 }
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.create-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #333;
+}
+
+.create-form input,
+.create-form textarea {
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.create-form textarea {
+  min-height: 100px;
+}
+
+.create-form button {
+  background: #4caf50;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.create-form button:hover {
+  background: #43a047;
+}
+
+.error {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.success {
+  color: #388e3c;
+  font-weight: 500;
+}

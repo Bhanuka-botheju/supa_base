@@ -12,7 +12,7 @@ export default function SmoothiesCard({ smoothe }) {
     <div className="smoothie-card">
       <div className="smoothie-content">
         <h3 className="smoothie-title">{smoothe.title}</h3>
-        
+        <p className="smoothie-method">{smoothe.method}</p>
       </div>
       
       <div className="smoothie-footer">

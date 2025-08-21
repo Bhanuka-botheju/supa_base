@@ -32,3 +32,60 @@ nav h1 {
   margin: 20px auto;
   padding: 20px;
 }
+.smoothie-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.smoothie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.smoothie-content {
+  margin-bottom: 12px;
+}
+
+.smoothie-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.smoothie-method {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.4;
+}
+
+.smoothie-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.rating {
+  background: #f4f4f4;
+  color: #ff9800;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.created-at {
+  font-style: italic;
+  color: #555;
+}

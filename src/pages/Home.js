@@ -5,6 +5,7 @@ import { useEffect, useState, } from "react"
 const Home = () => {
   const [fetcherror,setfetcherror] = useState(null);
   const [smoothies,setsmoothies] = useState(null);
+  const [orderby,setorderby] = useState("created_at")
 
   const onDelete =(id)=>{
     setsmoothies(prevSmoothies => {
@@ -18,6 +19,7 @@ const Home = () => {
       const {data,error} = await supabase
         .from("smoothe")
         .select()
+        .order(orderby,{ascending:false})
     
         if(error){
           setfetcherror("could not fetch smoothies")
@@ -34,7 +36,7 @@ const Home = () => {
     fetchSmoothies()
 
 
-  },[])
+  },[orderby])  // this orderby state is change this useEffect run again
 
 
   return (
@@ -45,6 +47,12 @@ const Home = () => {
       {
         smoothies && (
           <div className="smoothies">
+            <div className="order-by">
+              <button onClick={()=>setorderby("created_at")}>Time Created</button>
+              <button onClick={()=>setorderby("title")}>Title</button>
+              <button onClick={()=>setorderby("rating")}>Rating</button>
+              <p>Order by: {orderby}</p>
+            </div>
             {smoothies.map(smoothie => (
               <SmoothiesCard key={smoothie.id} smoothe={smoothie} onDelete = {onDelete}/>  // function pass as a prop
             ))}

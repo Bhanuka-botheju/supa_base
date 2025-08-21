@@ -1,9 +1,10 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import supabase from "../config/supabaseclient";
 
-export default function SmoothiesCard({ smoothe }) {
-  const navigate = useNavigate();
+export default function SmoothiesCard({ smoothe , onDelete }) {
+
+
 
   const createdDate = new Date(smoothe.created_at).toLocaleDateString("en-US", {
     year: "numeric",
@@ -20,7 +21,8 @@ export default function SmoothiesCard({ smoothe }) {
     if (error) {
       console.error("Delete failed:", error.message);
     } else {
-      window.location.reload();
+        onDelete(smoothe.id)
+    //   <window.location.reload();>
     }
   };
 
